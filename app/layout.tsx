@@ -29,7 +29,7 @@ export default function RootLayout({
               <img
                 src="/lil-gerb-walk-w-CROWN.gif"
                 alt="Gerb"
-                style={{ width: '42px', height: '42px', imageRendering: 'pixelated' }}
+                style={{ width: '52px', height: '52px', imageRendering: 'pixelated' }}
               />
               <span>$GERB</span>
               <span className="gerb-nav-pill">Gerb McGerbil</span>
