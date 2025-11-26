@@ -203,8 +203,8 @@ body {
 }
 
 .gerb-nav-social-icon {
-  width: 20px;
-  height: 20px;
+  width: 28px;
+  height: 28px;
   display: block;
   opacity: 0.9;
   transition: opacity 0.2s ease;
@@ -253,8 +253,8 @@ body {
   }
 
   .gerb-nav-brand img {
-    width: 28px !important;
-    height: 28px !important;
+    width: 36px !important;
+    height: 36px !important;
   }
 
   .gerb-nav-pill {
@@ -271,8 +271,8 @@ body {
   }
 
   .gerb-nav-social-icon {
-    width: 18px;
-    height: 18px;
+    width: 24px;
+    height: 24px;
   }
 }
 

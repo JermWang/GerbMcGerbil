@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-space-grotesk" });
 
 export const metadata: Metadata = {
   title: "Gerb McGerbil | $GERB",
@@ -20,7 +20,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} bg-black text-white min-h-screen antialiased`}
+        className={`${spaceGrotesk.variable} bg-black text-white min-h-screen antialiased`}
+        style={{ fontFamily: 'var(--font-space-grotesk)' }}
       >
         <header className="gerb-nav">
           <div className="gerb-nav-inner">
@@ -28,7 +29,7 @@ export default function RootLayout({
               <img
                 src="/lil-gerb-walk-w-CROWN.gif"
                 alt="Gerb"
-                style={{ width: '32px', height: '32px', imageRendering: 'pixelated' }}
+                style={{ width: '42px', height: '42px', imageRendering: 'pixelated' }}
               />
               <span>$GERB</span>
               <span className="gerb-nav-pill">Gerb McGerbil</span>
