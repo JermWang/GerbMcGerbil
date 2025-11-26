@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #000000;
+  --foreground: #f9fafb;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  background-image: url("/animated-site.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Minimal custom layout (no Tailwind utilities needed here) */
+.gerb-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.gerb-content {
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-left: 0;
+}
+
+.gerb-logo img {
+  max-width: 340px;
+  height: auto;
+  display: block;
+}
+
+.gerb-logo {
+  margin-left: -60px; /* nudge logo further left on desktop */
+}
+
+.gerb-buttons {
+  display: flex;
+  flex-direction: row; /* horizontal on desktop */
+  align-items: center;
+  gap: 16px;
+  margin-right: -240px; /* push buttons even further right on desktop */
+}
+
+.gerb-buttons img {
+  max-width: 170px;
+  height: auto;
+  display: block;
+}
+
+.gerb-contract-button {
+  position: fixed;
+  left: 50%;
+  bottom: 120px;
+  transform: translateX(-50%);
+  padding: 12px 22px;
+  border-radius: 9999px;
+  border: 1px solid rgba(148, 163, 184, 0.55);
+  background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.28), transparent),
+    radial-gradient(circle at bottom right, rgba(244, 114, 182, 0.26), transparent),
+    rgba(15, 23, 42, 0.75);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  color: #f9fafb;
+  font-size: 13px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: transform 0.15s ease-out, box-shadow 0.15s ease-out,
+    background 0.15s ease-out;
+}
+
+.gerb-contract-button:hover {
+  transform: translateX(-50%) translateY(-2px);
+  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.75);
+}
+
+.gerb-contract-label {
+  opacity: 0.8;
+}
+
+.gerb-contract-value {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  font-size: 12px;
+}
+
+@media (max-width: 768px) {
+  .gerb-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .gerb-buttons {
+    flex-direction: column; /* stack vertically on mobile */
+    align-items: center;
+    margin-right: 0; /* reset on mobile */
+  }
+
+  .gerb-logo {
+    margin-left: 0; /* reset on mobile */
+  }
+
+  .gerb-contract-button {
+    bottom: 60px;
+    padding-inline: 14px;
+    font-size: 12px;
+  }
+}
+
