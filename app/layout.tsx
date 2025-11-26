@@ -25,17 +25,23 @@ export default function RootLayout({
         <header className="gerb-nav">
           <div className="gerb-nav-inner">
             <div className="gerb-nav-brand">
-              $GERB <span className="gerb-nav-pill">Gerb McGerbil</span>
+              <img
+                src="/lil-gerb-walk-w-CROWN.gif"
+                alt="Gerb"
+                style={{ width: '32px', height: '32px', imageRendering: 'pixelated' }}
+              />
+              <span>$GERB</span>
+              <span className="gerb-nav-pill">Gerb McGerbil</span>
             </div>
             <nav className="gerb-nav-links">
               <a href="#" className="gerb-nav-link">
-                Cage
+                🏠 Cage
               </a>
               <a href="#" className="gerb-nav-link">
-                Dex
+                💎 Dex
               </a>
               <a href="#" className="gerb-nav-link">
-                Socials
+                🎉 Socials
               </a>
             </nav>
           </div>
