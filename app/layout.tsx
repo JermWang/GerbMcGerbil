@@ -22,6 +22,24 @@ export default function RootLayout({
       <body
         className={`${inter.variable} bg-black text-white min-h-screen antialiased`}
       >
+        <header className="gerb-nav">
+          <div className="gerb-nav-inner">
+            <div className="gerb-nav-brand">
+              $GERB <span className="gerb-nav-pill">Gerb McGerbil</span>
+            </div>
+            <nav className="gerb-nav-links">
+              <a href="#" className="gerb-nav-link">
+                Cage
+              </a>
+              <a href="#" className="gerb-nav-link">
+                Dex
+              </a>
+              <a href="#" className="gerb-nav-link">
+                Socials
+              </a>
+            </nav>
+          </div>
+        </header>
         {children}
       </body>
     </html>
