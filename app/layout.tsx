@@ -34,14 +34,14 @@ export default function RootLayout({
               <span className="gerb-nav-pill">Gerb McGerbil</span>
             </div>
             <nav className="gerb-nav-links">
-              <a href="#" className="gerb-nav-link">
-                🏠 Cage
+              <a href="https://twitter.com/placeholder" target="_blank" rel="noreferrer" className="gerb-nav-link">
+                <img src="/X-logo.png" alt="X" className="gerb-nav-social-icon" />
               </a>
-              <a href="#" className="gerb-nav-link">
-                💎 Dex
+              <a href="https://t.me/placeholder" target="_blank" rel="noreferrer" className="gerb-nav-link">
+                <img src="/telegram.png" alt="Telegram" className="gerb-nav-social-icon" />
               </a>
-              <a href="#" className="gerb-nav-link">
-                🎉 Socials
+              <a href="https://discord.gg/placeholder" target="_blank" rel="noreferrer" className="gerb-nav-link">
+                <img src="/discord-logo.png" alt="Discord" className="gerb-nav-social-icon" />
               </a>
             </nav>
           </div>

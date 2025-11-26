@@ -190,20 +190,19 @@ body {
 .gerb-nav-links {
   display: flex;
   align-items: center;
-  gap: 6px;
-  font-size: 13px;
+  gap: 8px;
 }
 
 .gerb-nav-link {
   text-decoration: none;
-  color: #fff;
-  font-weight: 700;
-  padding: 6px 14px;
-  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  border-radius: 12px;
   background: rgba(0, 0, 0, 0.25);
   border: 2px solid #000;
   transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
-  text-shadow: 1px 1px 0 #000;
   box-shadow: 0 3px 0 rgba(0, 0, 0, 0.3);
 }
 
@@ -216,6 +215,12 @@ body {
 .gerb-nav-link:active {
   transform: translateY(1px);
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+}
+
+.gerb-nav-social-icon {
+  width: 28px;
+  height: 28px;
+  display: block;
 }
 
 @media (max-width: 768px) {
@@ -266,13 +271,16 @@ body {
   }
 
   .gerb-nav-links {
-    gap: 4px;
-    font-size: 11px;
+    gap: 6px;
   }
 
   .gerb-nav-link {
-    padding: 5px 10px;
-    font-size: 10px;
+    padding: 4px;
+  }
+
+  .gerb-nav-social-icon {
+    width: 22px;
+    height: 22px;
   }
 }
 
