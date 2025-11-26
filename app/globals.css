@@ -122,16 +122,18 @@ body {
   border: 2px solid #000;
 }
 
-/* Top navigation bar - Early 2000s kids' site style! */
+/* Top navigation bar - Clean & Professional */
 .gerb-nav {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 50;
-  border-bottom: 4px solid #000;
-  background: linear-gradient(180deg, #d946ef 0%, #c026d3 50%, #a21caf 100%);
-  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.2), 0 8px 25px rgba(0, 0, 0, 0.3);
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
 }
 
 .gerb-nav-inner {
@@ -141,76 +143,41 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
-  padding: 12px 24px;
+  gap: 24px;
+  padding: 16px 32px;
   position: relative;
-}
-
-.gerb-nav-inner::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: repeating-linear-gradient(
-    90deg,
-    #f5dbb8 0px,
-    #f5dbb8 10px,
-    #c2763d 10px,
-    #c2763d 20px,
-    #00d9ff 20px,
-    #00d9ff 30px
-  );
-  pointer-events: none;
-}
-
-.gerb-nav-inner::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: repeating-linear-gradient(
-    90deg,
-    #00d9ff 0px,
-    #00d9ff 15px,
-    #f5dbb8 15px,
-    #f5dbb8 30px
-  );
-  pointer-events: none;
 }
 
 .gerb-nav-brand {
-  font-weight: 900;
-  letter-spacing: 0.05em;
-  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  font-size: 20px;
   color: #fff;
-  text-shadow: 3px 3px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000,
-    0 0 20px rgba(255, 255, 0, 0.6);
   display: flex;
   align-items: center;
-  gap: 10px;
-  position: relative;
+  gap: 12px;
+  transition: opacity 0.2s ease;
+}
+
+.gerb-nav-brand:hover {
+  opacity: 0.85;
 }
 
 .gerb-nav-pill {
-  padding: 6px 14px;
-  border-radius: 20px;
-  background: linear-gradient(180deg, #00d9ff 0%, #0ea5e9 100%);
-  font-size: 13px;
-  font-weight: 900;
-  border: 3px solid #000;
-  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.4), inset 0 2px 0 rgba(255, 255, 255, 0.3);
-  letter-spacing: 0.02em;
-  text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+  padding: 6px 12px;
+  border-radius: 6px;
+  background: rgba(217, 70, 239, 0.15);
+  font-size: 12px;
+  font-weight: 600;
+  border: 1px solid rgba(217, 70, 239, 0.3);
+  color: #d946ef;
+  letter-spacing: -0.01em;
 }
 
 .gerb-nav-links {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
 
 .gerb-nav-link {
@@ -220,29 +187,31 @@ body {
   justify-content: center;
   padding: 8px;
   border-radius: 8px;
-  background: linear-gradient(180deg, #fbbf24 0%, #f59e0b 100%);
-  border: 3px solid #000;
-  transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
-  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.4), inset 0 2px 0 rgba(255, 255, 255, 0.3);
-  position: relative;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.2s ease;
 }
 
 .gerb-nav-link:hover {
-  transform: translateY(-2px) rotate(-3deg);
-  background: linear-gradient(180deg, #fcd34d 0%, #fbbf24 100%);
-  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.4), 0 0 20px rgba(251, 191, 36, 0.6);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(217, 70, 239, 0.5);
+  transform: translateY(-1px);
 }
 
 .gerb-nav-link:active {
-  transform: translateY(2px) rotate(-3deg);
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+  transform: translateY(0);
 }
 
 .gerb-nav-social-icon {
-  width: 32px;
-  height: 32px;
+  width: 20px;
+  height: 20px;
   display: block;
-  filter: drop-shadow(1px 1px 0 rgba(0, 0, 0, 0.3));
+  opacity: 0.9;
+  transition: opacity 0.2s ease;
+}
+
+.gerb-nav-link:hover .gerb-nav-social-icon {
+  opacity: 1;
 }
 
 @media (max-width: 768px) {
@@ -270,27 +239,27 @@ body {
   }
 
   .gerb-page {
-    padding-top: 70px;
+    padding-top: 72px;
   }
 
   .gerb-nav-inner {
-    padding: 10px 16px;
-    gap: 12px;
+    padding: 12px 20px;
+    gap: 16px;
   }
 
   .gerb-nav-brand {
-    font-size: 14px;
-    gap: 6px;
+    font-size: 16px;
+    gap: 8px;
   }
 
   .gerb-nav-brand img {
-    width: 26px !important;
-    height: 26px !important;
+    width: 28px !important;
+    height: 28px !important;
   }
 
   .gerb-nav-pill {
-    font-size: 10px;
-    padding: 5px 10px;
+    font-size: 11px;
+    padding: 4px 10px;
   }
 
   .gerb-nav-links {
@@ -298,12 +267,12 @@ body {
   }
 
   .gerb-nav-link {
-    padding: 5px;
+    padding: 6px;
   }
 
   .gerb-nav-social-icon {
-    width: 24px;
-    height: 24px;
+    width: 18px;
+    height: 18px;
   }
 }
 
